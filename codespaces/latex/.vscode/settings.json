@@ -1,0 +1,121 @@
+{
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "/usr/local/texlive/2022/bin/x86_64-linux/xelatex",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "/usr/local/texlive/2022/bin/x86_64-linux/pdflatex",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "/usr/local/texlive/2022/bin/x86_64-linux/bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "/usr/local/texlive/2022/bin/x86_64-linux/biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.brf",
+        "*.bcf",
+        "*.run.xml",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.view.pdf.trim": 1,
+    "latex-workshop.view.pdf.invert": 0.88,
+    "latex-workshop.view.pdf.invertMode.brightness": 1.5,
+    "files.autoSave": "afterDelay",
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.latexEngine": "xelatex",
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-l=%WORKSPACE_FOLDER%/indent.yaml",
+        "-y=defaultIndent: '%INDENT%'"
+    ],
+    "latex-workshop.latexindent.path": "/usr/local/texlive/2022/bin/x86_64-linux/latexindent",
+    "wordcount_cjk.activateLanguages": [
+        "latex",
+        "markdown",
+        "plaintext"
+    ],
+}
