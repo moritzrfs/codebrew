@@ -4,73 +4,24 @@
     "latex-workshop.message.error.show": false,
     "latex-workshop.message.warning.show": false,
     "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
     "latex-workshop.latex.recipes": [
         {
             "name": "xelatex",
             "tools": [
                 "xelatex"
-            ]
-        },
-        {
-            "name": "xelatex -> bibtex -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "xelatex -> biber -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "biber",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
-        }
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "xelatex",
-            "command": "/usr/local/texlive/2022/bin/x86_64-linux/xelatex",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "/usr/local/texlive/2022/bin/x86_64-linux/pdflatex",
-            "args": [
-                "-shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "/usr/local/texlive/2022/bin/x86_64-linux/bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "biber",
-            "command": "/usr/local/texlive/2022/bin/x86_64-linux/biber",
-            "args": [
-                "%DOCFILE%"
             ]
         }
     ],
@@ -105,17 +56,4 @@
     "files.autoSave": "afterDelay",
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.latexEngine": "xelatex",
-    "latex-workshop.latexindent.args": [
-        "-c",
-        "%DIR%/",
-        "%TMPFILE%",
-        "-l=%WORKSPACE_FOLDER%/indent.yaml",
-        "-y=defaultIndent: '%INDENT%'"
-    ],
-    "latex-workshop.latexindent.path": "/usr/local/texlive/2022/bin/x86_64-linux/latexindent",
-    "wordcount_cjk.activateLanguages": [
-        "latex",
-        "markdown",
-        "plaintext"
-    ],
 }
