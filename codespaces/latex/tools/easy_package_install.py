@@ -12,8 +12,7 @@ class LatexInstaller:
     """
 
     def __init__(self, latex_filename, texlive_version="2023"):
-        # LaTeX-Code aus der Datei lesen
-        latex_filename = "../" + latex_filename
+        # latex_filename = "../" + latex_filename
         with open(latex_filename, "r") as f:
             latex_code = f.read()
 
