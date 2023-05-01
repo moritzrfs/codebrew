@@ -1,4 +1,21 @@
 {
+    // The following will be hidden and not shown in the UI (Ctrl+B)
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.bcf": true,        
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.log": true,
+        "**/*.out": true,
+        "**/*.run.xml": true,
+        "**/*.synctex.gz": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.toc": true,
+        "**/*.lof": true,
+        "**/*.lot": true,
+        "**/*.bib.sav": true,
+    },
     "latex-workshop.showContextMenu": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.message.error.show": false,
@@ -7,7 +24,7 @@
     "latex-workshop.latex.tools": [
         {
             "name": "xelatex",
-            "command": "xelatex",
+            "command": "/usr/local/texlive/2023/bin/x86_64-linux/xelatex",
             "args": [
                 "-shell-escape",
                 "-synctex=1",
@@ -15,12 +32,28 @@
                 "-file-line-error",
                 "%DOC%"
             ]
+        },
+        {
+            "name": "biber",
+            "command": "/usr/local/texlive/2023/bin/x86_64-linux/biber",
+            "args": [
+                "%DOCFILE%"
+            ]
         }
     ],
     "latex-workshop.latex.recipes": [
         {
             "name": "xelatex",
             "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
                 "xelatex"
             ]
         }
@@ -54,6 +87,4 @@
     "latex-workshop.view.pdf.invert": 0.88,
     "latex-workshop.view.pdf.invertMode.brightness": 1.5,
     "files.autoSave": "afterDelay",
-    "markdown-preview-enhanced.enableScriptExecution": true,
-    "markdown-preview-enhanced.latexEngine": "xelatex",
 }
