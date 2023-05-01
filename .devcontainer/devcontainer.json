@@ -1,7 +1,15 @@
 {
+    "name": "LaTeX Codespace",
+        
     "postCreateCommand": "sh bootstrap.sh",
     "customizations": {
 		"vscode": {
+            "extensions.autoUpdate": false,
+            "extensions": [
+                "James-Yu.latex-workshop",
+                "GitHub.copilot",
+                "valentjn.vscode-ltex"
+            ],
 			"settings": {
                 "files.exclude": {
                     "**/*.aux": true,
