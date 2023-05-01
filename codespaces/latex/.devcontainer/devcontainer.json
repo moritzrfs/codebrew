@@ -1,7 +1,7 @@
 {
     "name": "LaTeX Codespace",
         
-    "postCreateCommand": "sh bootstrap.sh",
+    "postCreateCommand": "sh init.sh",
     "customizations": {
 		"vscode": {
             "extensions.autoUpdate": false,
@@ -26,7 +26,7 @@
                     "**/*.toc": true,
                     "**/*.lof": true,
                     "**/*.lot": true,
-                    "**/*.bib.sav": true,
+                    "**/*.bib.sav": true
                 },
                 "latex-workshop.showContextMenu": true,
                 "latex-workshop.latex.autoBuild.run": "onSave",
@@ -98,7 +98,10 @@
                 "latex-workshop.view.pdf.trim": 1,
                 "latex-workshop.view.pdf.invert": 0.88,
                 "latex-workshop.view.pdf.invertMode.brightness": 1.5,
-                "files.autoSave": "afterDelay"
+                "files.autoSave": "afterDelay",
+                "workbench.editorAssociations": {
+                    "*.pdf": "latex-workshop-pdf-hook"
+                }
             }
         }
     }

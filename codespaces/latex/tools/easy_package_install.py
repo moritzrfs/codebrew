@@ -13,6 +13,7 @@ class LatexInstaller:
 
     def __init__(self, latex_filename, texlive_version="2023"):
         # LaTeX-Code aus der Datei lesen
+        latex_filename = "../" + latex_filename
         with open(latex_filename, "r") as f:
             latex_code = f.read()
 
@@ -31,6 +32,7 @@ class LatexInstaller:
 
         result = subprocess.run(tlmgr_command, capture_output=True)
         print(result.stdout.decode())
+        print("Installed packages: " + installs)
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
