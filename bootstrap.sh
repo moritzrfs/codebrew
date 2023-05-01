@@ -21,4 +21,4 @@ sudo apt install -y pdf2svg fonts-firacode
 
 echo ""
 echo "> Setup environment"
-echo "export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux" >>~/.bashrc
+echo "export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux" >>~/.bashrc
