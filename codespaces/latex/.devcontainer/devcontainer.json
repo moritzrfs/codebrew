@@ -99,9 +99,7 @@
                 "latex-workshop.view.pdf.invert": 0.88,
                 "latex-workshop.view.pdf.invertMode.brightness": 1.5,
                 "files.autoSave": "afterDelay",
-                "workbench.editorAssociations": {
-                    "*.pdf": "latex-workshop-pdf-hook"
-                }
+		"latex-workshop.view.pdf.viewer": "tab"
             }
         }
     }
