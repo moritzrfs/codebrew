@@ -11,6 +11,7 @@
                 "valentjn.vscode-ltex"
             ],
 			"settings": {
+                "syncExtensions": false,
                 "files.exclude": {
                     "**/*.aux": true,
                     "**/*.bcf": true,        
