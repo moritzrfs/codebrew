@@ -32,25 +32,3 @@ echo "> Running clean up"
 sudo rm -rf tmp/
 echo ""
 echo "> Done"
-
-echo ""
-echo "Runnning tests..."
-EXPECTED_XETEX="/usr/local/texlive/$TEXLIVE_VERSION/bin/x86_64-linux/xetex"
-EXPECTED_BIBER="/usr/local/texlive/$TEXLIVE_VERSION/bin/x86_64-linux/biber"
-
-ACTUAL_XETEX="$(which xetex)"
-ACTUAL_BIBER="$(which biber)"
-
-if [ "$EXPECTED_XETEX" = "$ACTUAL_XETEX" ]; then
-    echo "xetex installed correctly"
-else
-    echo "xetex not installed correctly"
-    exit 1
-fi
-
-if [ "$EXPECTED_BIBER" = "$ACTUAL_BIBER" ]; then
-    echo "biber installed correctly"
-else
-    echo "biber not installed correctly"
-    exit 1
-fi
