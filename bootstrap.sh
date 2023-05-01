@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 echo ""
-echo "> Download texlive"
+echo "Downloading texlive..."
 mkdir -p tmp
 cd tmp
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -11,17 +11,13 @@ sudo perl ./install-tl --no-interaction --no-doc-install --no-src-install --sche
 cd ..
 
 echo ""
-echo "> Install packages"
-sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install xetex biblatex biber float standalone xcolor titling booktabs
-wget http://cpanmin.us/ -O cpanm
-chmod +x cpanm
-sudo ./cpanm File::HomeDir YAML::Tiny
-sudo apt update
-sudo apt install -y pdf2svg fonts-firacode
+echo "Installing packages..."
+sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install xetex biblatex biber float standalone
 
 echo ""
-echo "> Setup environment"
-echo "export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux" >>~/.bashrc
+echo "Setting up environment..."
+echo "export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux" >> ~/.bashrc
+source ~/.bashrc
 
 echo "> Running clean up"
 cd ..
