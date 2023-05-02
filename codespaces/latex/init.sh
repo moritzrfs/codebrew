@@ -27,7 +27,7 @@ cd ..
 mkdir -p .vscode
 wget -O .vscode/settings.json https://raw.githubusercontent.com/moritzrfs/codebrew/main/codespaces/latex/.vscode/settings.json
 sed -i "s/TEXLIVE_VERSION/$TEXLIVE_VERSION/g" .vscode/settings.json
-wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/main/TeX.gitignore
+wget -O .gitignore https://raw.githubusercontent.com/moritzrfs/codebrew/main/codespaces/latex/.gitignore
 mkdir tools
 wget -O tools/easy_package_install.py https://raw.githubusercontent.com/moritzrfs/codebrew/main/codespaces/latex/tools/easy_package_install.py
 
