@@ -24,8 +24,12 @@ echo ""
 echo "Setting up environment..."
 echo "export PATH=$PATH:/usr/local/texlive/$TEXLIVE_VERSION/bin/x86_64-linux" >> ~/.bashrc
 cd ..
+mkdir -p .vscode
+wget -O .vscode/settings.json https://raw.githubusercontent.com/moritzrfs/codebrew/main/codespaces/latex/.vscode/settings.json
 sed -i "s/TEXLIVE_VERSION/$TEXLIVE_VERSION/g" .vscode/settings.json
 wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/main/TeX.gitignore
+mkdir tools
+wget -O tools/easy_package_install.py https://raw.githubusercontent.com/moritzrfs/codebrew/main/codespaces/latex/tools/easy_package_install.py
 
 echo "> Running clean up"
 

@@ -1,5 +1,20 @@
 {
-
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.bcf": true,        
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.log": true,
+        "**/*.out": true,
+        "**/*.run.xml": true,
+        "**/*.synctex.gz": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.toc": true,
+        "**/*.lof": true,
+        "**/*.lot": true,
+        "**/*.bib.sav": true,
+    },
     "latex-workshop.showContextMenu": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.message.error.show": false,
@@ -10,7 +25,7 @@
     "latex-workshop.latex.tools": [
         {
             "name": "pdflatex",
-            "command": "/usr/local/texlive/2023/bin/x86_64-linux/pdflatex",
+            "command": "/usr/local/texlive/TEXLIVE_VERSION/bin/x86_64-linux/pdflatex",
             "args": [
                 "--shell-escape",
                 "-synctex=1",
@@ -21,7 +36,7 @@
         },
         {
             "name": "biber",
-            "command": "/usr/local/texlive/2023/bin/x86_64-linux/biber",
+            "command": "/usr/local/texlive/TEXLIVE_VERSION/bin/x86_64-linux/biber",
             "args": [
                 "%DOCFILE%"
             ]
