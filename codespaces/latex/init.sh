@@ -18,13 +18,13 @@ echo "Detected texlive version: $TEXLIVE_VERSION"
 
 echo ""
 echo "Installing packages..."
-sudo /usr/local/texlive/$TEXLIVE_VERSION/bin/x86_64-linux/tlmgr install xetex biblatex biber float standalone
+sudo /usr/local/texlive/$TEXLIVE_VERSION/bin/x86_64-linux/tlmgr install pdflatex biblatex biber float standalone babel-german
 
 echo ""
 echo "Setting up environment..."
 echo "export PATH=$PATH:/usr/local/texlive/$TEXLIVE_VERSION/bin/x86_64-linux" >> ~/.bashrc
 cd ..
-sed -i "s/TEXLIVE_VERSION/$TEXLIVE_VERSION/g" .devcontainer/devcontainer.json
+sed -i "s/TEXLIVE_VERSION/$TEXLIVE_VERSION/g" .vscode/settings.json
 wget -O .gitignore https://raw.githubusercontent.com/github/gitignore/main/TeX.gitignore
 
 echo "> Running clean up"
