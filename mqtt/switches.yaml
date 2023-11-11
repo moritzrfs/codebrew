@@ -1,0 +1,12 @@
+# simple switch for MQTT-Client that uses a relay shield
+switch:
+  unique_id: "99d973c0-1a43-41b7-b50d-f203c62553ca"
+  name: "MQTT_Switch_001"
+  command_topic: "MQTT_Switch_001/output"
+  payload_on: "on"
+  payload_off: "off"
+  state_topic: "MQTT_Switch_001/relay"
+  state_on: "on"
+  state_off: "off"
+  qos: 0
+  retain: false # true = retain last state
