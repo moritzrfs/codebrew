@@ -1,0 +1,7 @@
+sensor:
+  - name: "MQTT_Sensor_Humidity_001"
+    unique_id: "0ab5361b-50dd-490f-90eb-f9f8208238d4"
+    state_topic: "MQTT_Sensor_Humidity_001/data"
+    value_template: "{{ value }}"
+    json_attributes_topic: "MQTT_Sensor_Humidity_001/json_data"
+    json_attributes_template: "{{ value_json | tojson }}"
