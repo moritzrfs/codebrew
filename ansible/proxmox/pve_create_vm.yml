@@ -1,0 +1,15 @@
+- hosts: pvehost01
+  become: false
+  gather_facts: false
+  tasks:
+
+  - name: Create minimal VM
+    vars:
+      ansible_python_interpreter: /usr/bin/python3
+    proxmox_kvm:
+      api_user: 
+      api_token_id: 
+      api_token_secret: 
+      api_host: pvehost01
+      node: server
+      name: vmtest
